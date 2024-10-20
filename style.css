@@ -1,0 +1,17 @@
+.signup-form input, .signup-form button, .login-form input, .login-form button {
+  display: block;
+  margin: 5px;
+  padding: 5px;
+}
+
+
+.video-section{
+    display:  grid; 
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.youtube-card{
+    display :flex;
+    flex-direction: column;
+}

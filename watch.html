@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch</title>
+</head>
+<body>
+    
+    <div>
+
+         <div class="left">
+
+         </div>
+
+         <div class="right">
+        
+         </div>
+
+    </div>
+
+     <script>
+
+      let currentVideoJSON = localStorage.getItem("currentVideo");
+      let leftSection = document.querySelector(".left");
+      let currentVideo 
+      if(currentVideoJSON){
+        currentVideo = JSON.parse(currentVideoJSON);
+
+        let iframe = document.createElement("iframe");
+        iframe.src = `https://www.youtube.com/embed/${currentVideo.id.videoId}`;
+        iframe.width = "560";
+        iframe.height = "315";
+        iframe.allowfullscreen = true;
+        iframe.title = currentVideo.snippet.title;
+
+        leftSection.append(iframe);
+
+
+      }
+
+
+
+
+
+     </script>
+
+</body>
+</html>
+
+
+
+<!-- <iframe width="560" height="315" src="" title= allowfullscreen></iframe>
+
+
+`https://www.youtube.com/embed/jznMQYxa7gs?si=${}` -->
